@@ -1,12 +1,13 @@
 //
 //  BBAppDelegate.h
-//  BBGroover
+//  BeatBuilder
 //
-//  Created by Parker Wightman on 7/26/12.
+//  Created by Parker Wightman on 7/21/12.
 //  Copyright (c) 2012 Parker Wightman. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "BBGroover.h"
 
 @interface BBAppDelegate : UIResponder <UIApplicationDelegate>
 

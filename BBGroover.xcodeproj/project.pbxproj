@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D090CA03F48486F86C68157 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6B22E5604A4F2CB6A6D65C /* libPods.a */; };
 		5F74A52615C19A6200DBD241 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F74A52515C19A6200DBD241 /* UIKit.framework */; };
 		5F74A52815C19A6200DBD241 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F74A52715C19A6200DBD241 /* Foundation.framework */; };
 		5F74A52A15C19A6200DBD241 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F74A52915C19A6200DBD241 /* CoreGraphics.framework */; };
@@ -21,6 +22,13 @@
 		5F74A54915C19A6200DBD241 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F74A52715C19A6200DBD241 /* Foundation.framework */; };
 		5F74A55115C19A6200DBD241 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F74A54F15C19A6200DBD241 /* InfoPlist.strings */; };
 		5F74A55415C19A6200DBD241 /* BBGrooverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A55315C19A6200DBD241 /* BBGrooverTests.m */; };
+		5F74A56E15C19B9F00DBD241 /* BBGroove.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A56915C19B9F00DBD241 /* BBGroove.m */; };
+		5F74A56F15C19B9F00DBD241 /* BBVoice.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A56B15C19B9F00DBD241 /* BBVoice.m */; };
+		5F74A57015C19B9F00DBD241 /* BBGroover.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A56D15C19B9F00DBD241 /* BBGroover.m */; };
+		5F74A57515C19BCD00DBD241 /* bassdrum.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F74A57215C19BCD00DBD241 /* bassdrum.wav */; };
+		5F74A57615C19BCD00DBD241 /* snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F74A57315C19BCD00DBD241 /* snare.wav */; };
+		5F74A57715C19BCD00DBD241 /* hihat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F74A57415C19BCD00DBD241 /* hihat.wav */; };
+		5F74A57A15C19DE800DBD241 /* NSNumber+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A57915C19DE800DBD241 /* NSNumber+Utilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F6B22E5604A4F2CB6A6D65C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F74A52115C19A6200DBD241 /* BBGroover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBGroover.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F74A52515C19A6200DBD241 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		5F74A52715C19A6200DBD241 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5F74A52915C19A6200DBD241 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5F74A52515C19A6200DBD241 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5F74A52715C19A6200DBD241 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5F74A52915C19A6200DBD241 /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5F74A52D15C19A6200DBD241 /* BBGroover-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BBGroover-Info.plist"; sourceTree = "<group>"; };
 		5F74A52F15C19A6200DBD241 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5F74A53115C19A6200DBD241 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +63,18 @@
 		5F74A55015C19A6200DBD241 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5F74A55215C19A6200DBD241 /* BBGrooverTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGrooverTests.h; sourceTree = "<group>"; };
 		5F74A55315C19A6200DBD241 /* BBGrooverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBGrooverTests.m; sourceTree = "<group>"; };
+		5F74A56815C19B9F00DBD241 /* BBGroove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGroove.h; sourceTree = "<group>"; };
+		5F74A56915C19B9F00DBD241 /* BBGroove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGroove.m; sourceTree = "<group>"; };
+		5F74A56A15C19B9F00DBD241 /* BBVoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBVoice.h; sourceTree = "<group>"; };
+		5F74A56B15C19B9F00DBD241 /* BBVoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBVoice.m; sourceTree = "<group>"; };
+		5F74A56C15C19B9F00DBD241 /* BBGroover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGroover.h; sourceTree = "<group>"; };
+		5F74A56D15C19B9F00DBD241 /* BBGroover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGroover.m; sourceTree = "<group>"; };
+		5F74A57215C19BCD00DBD241 /* bassdrum.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bassdrum.wav; sourceTree = "<group>"; };
+		5F74A57315C19BCD00DBD241 /* snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snare.wav; sourceTree = "<group>"; };
+		5F74A57415C19BCD00DBD241 /* hihat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hihat.wav; sourceTree = "<group>"; };
+		5F74A57815C19DE800DBD241 /* NSNumber+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Utilities.h"; sourceTree = "<group>"; };
+		5F74A57915C19DE800DBD241 /* NSNumber+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Utilities.m"; sourceTree = "<group>"; };
+		8357782F2E3A491A97F5D7BF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +85,7 @@
 				5F74A52615C19A6200DBD241 /* UIKit.framework in Frameworks */,
 				5F74A52815C19A6200DBD241 /* Foundation.framework in Frameworks */,
 				5F74A52A15C19A6200DBD241 /* CoreGraphics.framework in Frameworks */,
+				5D090CA03F48486F86C68157 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +109,7 @@
 				5F74A54C15C19A6200DBD241 /* BBGrooverTests */,
 				5F74A52415C19A6200DBD241 /* Frameworks */,
 				5F74A52215C19A6200DBD241 /* Products */,
+				8357782F2E3A491A97F5D7BF /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +129,7 @@
 				5F74A52715C19A6200DBD241 /* Foundation.framework */,
 				5F74A52915C19A6200DBD241 /* CoreGraphics.framework */,
 				5F74A54615C19A6200DBD241 /* SenTestingKit.framework */,
+				3F6B22E5604A4F2CB6A6D65C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,12 +137,14 @@
 		5F74A52B15C19A6200DBD241 /* BBGroover */ = {
 			isa = PBXGroup;
 			children = (
+				5F74A57C15C1A40000DBD241 /* Grooving */,
 				5F74A53415C19A6200DBD241 /* BBAppDelegate.h */,
 				5F74A53515C19A6200DBD241 /* BBAppDelegate.m */,
 				5F74A53715C19A6200DBD241 /* MainStoryboard_iPhone.storyboard */,
 				5F74A53A15C19A6200DBD241 /* MainStoryboard_iPad.storyboard */,
 				5F74A53D15C19A6200DBD241 /* BBViewController.h */,
 				5F74A53E15C19A6200DBD241 /* BBViewController.m */,
+				5F74A57B15C19DF200DBD241 /* Categories */,
 				5F74A52C15C19A6200DBD241 /* Supporting Files */,
 			);
 			path = BBGroover;
@@ -127,6 +153,9 @@
 		5F74A52C15C19A6200DBD241 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5F74A57215C19BCD00DBD241 /* bassdrum.wav */,
+				5F74A57315C19BCD00DBD241 /* snare.wav */,
+				5F74A57415C19BCD00DBD241 /* hihat.wav */,
 				5F74A52D15C19A6200DBD241 /* BBGroover-Info.plist */,
 				5F74A52E15C19A6200DBD241 /* InfoPlist.strings */,
 				5F74A53115C19A6200DBD241 /* main.m */,
@@ -154,6 +183,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5F74A57B15C19DF200DBD241 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5F74A57815C19DE800DBD241 /* NSNumber+Utilities.h */,
+				5F74A57915C19DE800DBD241 /* NSNumber+Utilities.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		5F74A57C15C1A40000DBD241 /* Grooving */ = {
+			isa = PBXGroup;
+			children = (
+				5F74A56C15C19B9F00DBD241 /* BBGroover.h */,
+				5F74A56D15C19B9F00DBD241 /* BBGroover.m */,
+				5F74A56815C19B9F00DBD241 /* BBGroove.h */,
+				5F74A56915C19B9F00DBD241 /* BBGroove.m */,
+				5F74A56A15C19B9F00DBD241 /* BBVoice.h */,
+				5F74A56B15C19B9F00DBD241 /* BBVoice.m */,
+			);
+			name = Grooving;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,6 +215,7 @@
 				5F74A51D15C19A6200DBD241 /* Sources */,
 				5F74A51E15C19A6200DBD241 /* Frameworks */,
 				5F74A51F15C19A6200DBD241 /* Resources */,
+				423BA9CEE5014F11B6E76D31 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,6 +281,9 @@
 				5F74A53015C19A6200DBD241 /* InfoPlist.strings in Resources */,
 				5F74A53915C19A6200DBD241 /* MainStoryboard_iPhone.storyboard in Resources */,
 				5F74A53C15C19A6200DBD241 /* MainStoryboard_iPad.storyboard in Resources */,
+				5F74A57515C19BCD00DBD241 /* bassdrum.wav in Resources */,
+				5F74A57615C19BCD00DBD241 /* snare.wav in Resources */,
+				5F74A57715C19BCD00DBD241 /* hihat.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +298,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		423BA9CEE5014F11B6E76D31 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 		5F74A54315C19A6200DBD241 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -266,6 +335,10 @@
 				5F74A53215C19A6200DBD241 /* main.m in Sources */,
 				5F74A53615C19A6200DBD241 /* BBAppDelegate.m in Sources */,
 				5F74A53F15C19A6200DBD241 /* BBViewController.m in Sources */,
+				5F74A56E15C19B9F00DBD241 /* BBGroove.m in Sources */,
+				5F74A56F15C19B9F00DBD241 /* BBVoice.m in Sources */,
+				5F74A57015C19B9F00DBD241 /* BBGroover.m in Sources */,
+				5F74A57A15C19DE800DBD241 /* NSNumber+Utilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +447,7 @@
 		};
 		5F74A55815C19A6200DBD241 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8357782F2E3A491A97F5D7BF /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BBGroover/BBGroover-Prefix.pch";
@@ -385,6 +459,7 @@
 		};
 		5F74A55915C19A6200DBD241 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8357782F2E3A491A97F5D7BF /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BBGroover/BBGroover-Prefix.pch";
@@ -447,6 +522,7 @@
 				5F74A55915C19A6200DBD241 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F74A55A15C19A6200DBD241 /* Build configuration list for PBXNativeTarget "BBGrooverTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +531,7 @@
 				5F74A55C15C19A6200DBD241 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
