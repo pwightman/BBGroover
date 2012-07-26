@@ -36,7 +36,6 @@ A groove stores a collection of voices, as well as other relevant meta data like
 BBGroove *groove = [[BBGroove alloc] init];
 
 groove.voices = @[ snare, hihat ];
-
 groove.tempo = 120;
     
 // 4/4 time
