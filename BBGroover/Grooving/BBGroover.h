@@ -28,10 +28,10 @@ typedef enum BBGrooverBeat : NSUInteger {
 @property (nonatomic, strong) BBGroove *groove;
 @property (nonatomic, assign, readonly) BOOL running;
 
-- (void) start;
-- (void) stop;
-- (void) pause;
-- (void) resume;
+- (void) startGrooving;
+- (void) stopGrooving;
+- (void) pauseGrooving;
+- (void) resumeGrooving;
 - (NSUInteger) totalTicks;
 - (id)initWithGroove:(BBGroove *)groove;
 

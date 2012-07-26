@@ -82,14 +82,14 @@
 // voice has the highest sibdivision. For example, if the groove's tempo was 60, and the
 // voice with the highest subdivision was 16th notes, then this delegate would be called
 // 16 times every second.
-- (void) groover:(BBGroover *)sequencer didTick:(NSNumber *)tick {
+- (void) groover:(BBGroover *)groover didTick:(NSNumber *)tick {
     // You could update the UI to reflect where the groover was in its ticking, for example.
 }
 
 // This method is similar to the one above, except it will only be called if voice(s) are
 // ticking at a particular subdivision. Here, we're just playing the audio file related to
 // each ticking voice.
-- (void) groover:(BBGroover *)sequencer voicesDidTick:(NSArray *)voices {
+- (void) groover:(BBGroover *)groover voicesDidTick:(NSArray *)voices {
     for (BBVoice *voice in voices) {
         [[OALSimpleAudio sharedInstance] playEffect:voice.audioPath];
     }
@@ -117,11 +117,11 @@
 }
 
 - (IBAction)startTapped:(id)sender {
-    [_groover resume];
+    [_groover resumeGrooving];
 }
 
 - (IBAction)stopTapped:(id)sender {
-    [_groover pause];
+    [_groover pauseGrooving];
 }
 
 

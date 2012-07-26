@@ -135,7 +135,7 @@
     }
 }
 
-- (void) start {
+- (void) startGrooving {
     [self startAtTick:1];
 }
 
@@ -146,20 +146,20 @@
     }
 }
 
-- (void) pause {
+- (void) pauseGrooving {
     _running = NO;
 }
 
-- (void) resume {
+- (void) resumeGrooving {
     if (_currentTick) {
         [self startAtTick:_currentTick];
     } else {
-        [self start];
+        [self startGrooving];
     }
 
 }
 
-- (void) stop {
+- (void) stopGrooving {
     _running = NO;
     _currentTick = 1;
 }

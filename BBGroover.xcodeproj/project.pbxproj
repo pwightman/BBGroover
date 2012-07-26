@@ -22,13 +22,13 @@
 		5F74A54915C19A6200DBD241 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F74A52715C19A6200DBD241 /* Foundation.framework */; };
 		5F74A55115C19A6200DBD241 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F74A54F15C19A6200DBD241 /* InfoPlist.strings */; };
 		5F74A55415C19A6200DBD241 /* BBGrooverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A55315C19A6200DBD241 /* BBGrooverTests.m */; };
-		5F74A56E15C19B9F00DBD241 /* BBGroove.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A56915C19B9F00DBD241 /* BBGroove.m */; };
-		5F74A56F15C19B9F00DBD241 /* BBVoice.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A56B15C19B9F00DBD241 /* BBVoice.m */; };
-		5F74A57015C19B9F00DBD241 /* BBGroover.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A56D15C19B9F00DBD241 /* BBGroover.m */; };
 		5F74A57515C19BCD00DBD241 /* bassdrum.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F74A57215C19BCD00DBD241 /* bassdrum.wav */; };
 		5F74A57615C19BCD00DBD241 /* snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F74A57315C19BCD00DBD241 /* snare.wav */; };
 		5F74A57715C19BCD00DBD241 /* hihat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F74A57415C19BCD00DBD241 /* hihat.wav */; };
-		5F74A57A15C19DE800DBD241 /* NSNumber+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A57915C19DE800DBD241 /* NSNumber+Utilities.m */; };
+		5F74A58C15C1A74400DBD241 /* BBGroove.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A58715C1A74400DBD241 /* BBGroove.m */; };
+		5F74A58D15C1A74400DBD241 /* BBVoice.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A58915C1A74400DBD241 /* BBVoice.m */; };
+		5F74A58E15C1A74400DBD241 /* BBGroover.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A58B15C1A74400DBD241 /* BBGroover.m */; };
+		5F74A59115C1A74D00DBD241 /* NSNumber+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A59015C1A74D00DBD241 /* NSNumber+Utilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,17 +63,17 @@
 		5F74A55015C19A6200DBD241 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5F74A55215C19A6200DBD241 /* BBGrooverTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGrooverTests.h; sourceTree = "<group>"; };
 		5F74A55315C19A6200DBD241 /* BBGrooverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBGrooverTests.m; sourceTree = "<group>"; };
-		5F74A56815C19B9F00DBD241 /* BBGroove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGroove.h; sourceTree = "<group>"; };
-		5F74A56915C19B9F00DBD241 /* BBGroove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGroove.m; sourceTree = "<group>"; };
-		5F74A56A15C19B9F00DBD241 /* BBVoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBVoice.h; sourceTree = "<group>"; };
-		5F74A56B15C19B9F00DBD241 /* BBVoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBVoice.m; sourceTree = "<group>"; };
-		5F74A56C15C19B9F00DBD241 /* BBGroover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGroover.h; sourceTree = "<group>"; };
-		5F74A56D15C19B9F00DBD241 /* BBGroover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGroover.m; sourceTree = "<group>"; };
 		5F74A57215C19BCD00DBD241 /* bassdrum.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bassdrum.wav; sourceTree = "<group>"; };
 		5F74A57315C19BCD00DBD241 /* snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snare.wav; sourceTree = "<group>"; };
 		5F74A57415C19BCD00DBD241 /* hihat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hihat.wav; sourceTree = "<group>"; };
-		5F74A57815C19DE800DBD241 /* NSNumber+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Utilities.h"; sourceTree = "<group>"; };
-		5F74A57915C19DE800DBD241 /* NSNumber+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Utilities.m"; sourceTree = "<group>"; };
+		5F74A58615C1A74400DBD241 /* BBGroove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBGroove.h; path = Grooving/BBGroove.h; sourceTree = "<group>"; };
+		5F74A58715C1A74400DBD241 /* BBGroove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBGroove.m; path = Grooving/BBGroove.m; sourceTree = "<group>"; };
+		5F74A58815C1A74400DBD241 /* BBVoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBVoice.h; path = Grooving/BBVoice.h; sourceTree = "<group>"; };
+		5F74A58915C1A74400DBD241 /* BBVoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBVoice.m; path = Grooving/BBVoice.m; sourceTree = "<group>"; };
+		5F74A58A15C1A74400DBD241 /* BBGroover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBGroover.h; path = Grooving/BBGroover.h; sourceTree = "<group>"; };
+		5F74A58B15C1A74400DBD241 /* BBGroover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBGroover.m; path = Grooving/BBGroover.m; sourceTree = "<group>"; };
+		5F74A58F15C1A74D00DBD241 /* NSNumber+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+Utilities.h"; path = "Grooving/Categories/NSNumber+Utilities.h"; sourceTree = "<group>"; };
+		5F74A59015C1A74D00DBD241 /* NSNumber+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+Utilities.m"; path = "Grooving/Categories/NSNumber+Utilities.m"; sourceTree = "<group>"; };
 		8357782F2E3A491A97F5D7BF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -186,8 +186,8 @@
 		5F74A57B15C19DF200DBD241 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				5F74A57815C19DE800DBD241 /* NSNumber+Utilities.h */,
-				5F74A57915C19DE800DBD241 /* NSNumber+Utilities.m */,
+				5F74A58F15C1A74D00DBD241 /* NSNumber+Utilities.h */,
+				5F74A59015C1A74D00DBD241 /* NSNumber+Utilities.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -195,12 +195,12 @@
 		5F74A57C15C1A40000DBD241 /* Grooving */ = {
 			isa = PBXGroup;
 			children = (
-				5F74A56C15C19B9F00DBD241 /* BBGroover.h */,
-				5F74A56D15C19B9F00DBD241 /* BBGroover.m */,
-				5F74A56815C19B9F00DBD241 /* BBGroove.h */,
-				5F74A56915C19B9F00DBD241 /* BBGroove.m */,
-				5F74A56A15C19B9F00DBD241 /* BBVoice.h */,
-				5F74A56B15C19B9F00DBD241 /* BBVoice.m */,
+				5F74A58615C1A74400DBD241 /* BBGroove.h */,
+				5F74A58715C1A74400DBD241 /* BBGroove.m */,
+				5F74A58815C1A74400DBD241 /* BBVoice.h */,
+				5F74A58915C1A74400DBD241 /* BBVoice.m */,
+				5F74A58A15C1A74400DBD241 /* BBGroover.h */,
+				5F74A58B15C1A74400DBD241 /* BBGroover.m */,
 			);
 			name = Grooving;
 			sourceTree = "<group>";
@@ -335,10 +335,10 @@
 				5F74A53215C19A6200DBD241 /* main.m in Sources */,
 				5F74A53615C19A6200DBD241 /* BBAppDelegate.m in Sources */,
 				5F74A53F15C19A6200DBD241 /* BBViewController.m in Sources */,
-				5F74A56E15C19B9F00DBD241 /* BBGroove.m in Sources */,
-				5F74A56F15C19B9F00DBD241 /* BBVoice.m in Sources */,
-				5F74A57015C19B9F00DBD241 /* BBGroover.m in Sources */,
-				5F74A57A15C19DE800DBD241 /* NSNumber+Utilities.m in Sources */,
+				5F74A58C15C1A74400DBD241 /* BBGroove.m in Sources */,
+				5F74A58D15C1A74400DBD241 /* BBVoice.m in Sources */,
+				5F74A58E15C1A74400DBD241 /* BBGroover.m in Sources */,
+				5F74A59115C1A74D00DBD241 /* NSNumber+Utilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
