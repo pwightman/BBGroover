@@ -103,7 +103,7 @@
                 // example, You would only want 0, 4, 8, 12, or in other words, if the
                 // _currentTick % 4 == 0. 4 being the divisor obtained above.
                 if ( (_currentTick - 1) % divisor == 0) {
-                    return [[evaluatedObject values][(_currentTick - 1) / divisor] boolValue];
+                    return [[[evaluatedObject values] objectAtIndex:(_currentTick - 1) / divisor] boolValue];
                 } else {
                     return FALSE;
                 }
