@@ -13,10 +13,6 @@
 
 @interface BBGroover ()
 
-@property (nonatomic, assign) NSUInteger currentTick;
-@property (nonatomic, strong) NSThread *runLoop;
-@property (nonatomic, assign) BBGrooverBeat currentSubdivision;
-
 @end
 
 
@@ -29,6 +25,7 @@
         _running = NO;
         _groove = groove;
         _currentSubdivision = [groove maxSubdivision];
+        _currentTick = 0;
     }
     
     return self;
@@ -102,8 +99,8 @@
                 // We only want the voice to play on the correct tick. Following the above
                 // example, You would only want 0, 4, 8, 12, or in other words, if the
                 // _currentTick % 4 == 0. 4 being the divisor obtained above.
-                if ( (_currentTick - 1) % divisor == 0) {
-                    return [[[evaluatedObject values] objectAtIndex:(_currentTick - 1) / divisor] boolValue];
+                if ( (_currentTick) % divisor == 0) {
+                    return [[evaluatedObject values][(_currentTick) / divisor] boolValue];
                 } else {
                     return FALSE;
                 }
@@ -111,10 +108,11 @@
             
             NSArray *tickingVoices = [_groove.voices filteredArrayUsingPredicate:predicate];
             
+            NSUInteger blockTick = _currentTick;
             
             dispatch_async(queue, ^{
                 
-                [_delegate groover:self didTick:@(nextTime - currentTime)];
+                [_delegate groover:self didTick:blockTick];
                 
                 if (tickingVoices.count > 0) {
                     [_delegate groover:self voicesDidTick:tickingVoices];
@@ -122,7 +120,7 @@
                 
             });
             
-            _currentTick = (_currentTick) % (totalTicks) + 1;
+            _currentTick = (_currentTick + 1) % (totalTicks);
             interval = [self computeInterval];
             nextTime += interval / (_currentSubdivision / 4);
         }
@@ -136,7 +134,7 @@
 }
 
 - (void) startGrooving {
-    [self startAtTick:1];
+    [self startAtTick:0];
 }
 
 - (void) startAtTick:(NSUInteger)tick {
@@ -161,7 +159,7 @@
 
 - (void) stopGrooving {
     _running = NO;
-    _currentTick = 1;
+    _currentTick = 0;
 }
 
 - (NSUInteger) totalTicks {

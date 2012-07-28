@@ -17,5 +17,7 @@
 @property (nonatomic, assign, readonly) BBGrooverBeat subdivision;
 
 - (id) initWithValues:(NSArray *)values;
+- (id) initWithSubdivision:(BBGrooverBeat)subdivision;
+- (void) setValue:(BOOL)value forIndex:(NSUInteger)index;
 
 @end

@@ -27,6 +27,8 @@ typedef enum BBGrooverBeat : NSUInteger {
 @property (nonatomic, assign) NSObject<BBGrooverDelegate> *delegate;
 @property (nonatomic, strong) BBGroove *groove;
 @property (nonatomic, assign, readonly) BOOL running;
+@property (nonatomic, readonly) NSUInteger currentTick;
+@property (nonatomic, assign, readonly) BBGrooverBeat currentSubdivision;
 
 - (void) startGrooving;
 - (void) stopGrooving;
@@ -39,7 +41,7 @@ typedef enum BBGrooverBeat : NSUInteger {
 
 @protocol BBGrooverDelegate <NSObject>
 
-- (void) groover:(BBGroover *)groover didTick:(NSNumber *)tick;
+- (void) groover:(BBGroover *)groover didTick:(NSUInteger)tick;
 - (void) groover:(BBGroover *)groover voicesDidTick:(NSArray *)voices;
 
 @end

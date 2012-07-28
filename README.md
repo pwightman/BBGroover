@@ -21,9 +21,12 @@ NSArray *values = @[ @NO,  @NO,  @YES, @YES ];
 BBVoice *snare = [[BBVoice alloc] initWithValues:values];
 snare.name = @"Snare drum";
 snare.audioPath = @"snare.wav";
+```
 
-values = @[ @YES, @YES, @YES, @YES, @YES, @YES, @YES, @YES ];
-BBVoice *hihat = [[BBVoice alloc] initWithValues:values];
+You can also create an empty voice and just indicate the subdivision.
+
+```
+BBVoice *hihat = [[BBVoice alloc] initWithSubdivision:BBGrooverBeatEighth];
 hihat.name = @"Hi Hat";
 hihat.audioPath = @"hihat.wav";
 ```
