@@ -29,6 +29,8 @@
 		5F74A58D15C1A74400DBD241 /* BBVoice.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A58915C1A74400DBD241 /* BBVoice.m */; };
 		5F74A58E15C1A74400DBD241 /* BBGroover.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A58B15C1A74400DBD241 /* BBGroover.m */; };
 		5F74A59115C1A74D00DBD241 /* NSNumber+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F74A59015C1A74D00DBD241 /* NSNumber+Utilities.m */; };
+		5FA7BE2915C48D8600983347 /* BBTickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA7BE2615C48D8600983347 /* BBTickView.m */; };
+		5FA7BE2A15C48D8600983347 /* BBGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA7BE2815C48D8600983347 /* BBGridView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,10 @@
 		5F74A58B15C1A74400DBD241 /* BBGroover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBGroover.m; path = Grooving/BBGroover.m; sourceTree = "<group>"; };
 		5F74A58F15C1A74D00DBD241 /* NSNumber+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+Utilities.h"; path = "Grooving/Categories/NSNumber+Utilities.h"; sourceTree = "<group>"; };
 		5F74A59015C1A74D00DBD241 /* NSNumber+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+Utilities.m"; path = "Grooving/Categories/NSNumber+Utilities.m"; sourceTree = "<group>"; };
+		5FA7BE2515C48D8600983347 /* BBTickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTickView.h; sourceTree = "<group>"; };
+		5FA7BE2615C48D8600983347 /* BBTickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBTickView.m; sourceTree = "<group>"; };
+		5FA7BE2715C48D8600983347 /* BBGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGridView.h; sourceTree = "<group>"; };
+		5FA7BE2815C48D8600983347 /* BBGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGridView.m; sourceTree = "<group>"; };
 		8357782F2E3A491A97F5D7BF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -144,6 +150,10 @@
 				5F74A53A15C19A6200DBD241 /* MainStoryboard_iPad.storyboard */,
 				5F74A53D15C19A6200DBD241 /* BBViewController.h */,
 				5F74A53E15C19A6200DBD241 /* BBViewController.m */,
+				5FA7BE2515C48D8600983347 /* BBTickView.h */,
+				5FA7BE2615C48D8600983347 /* BBTickView.m */,
+				5FA7BE2715C48D8600983347 /* BBGridView.h */,
+				5FA7BE2815C48D8600983347 /* BBGridView.m */,
 				5F74A57B15C19DF200DBD241 /* Categories */,
 				5F74A52C15C19A6200DBD241 /* Supporting Files */,
 			);
@@ -339,6 +349,8 @@
 				5F74A58D15C1A74400DBD241 /* BBVoice.m in Sources */,
 				5F74A58E15C1A74400DBD241 /* BBGroover.m in Sources */,
 				5F74A59115C1A74D00DBD241 /* NSNumber+Utilities.m in Sources */,
+				5FA7BE2915C48D8600983347 /* BBTickView.m in Sources */,
+				5FA7BE2A15C48D8600983347 /* BBGridView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
