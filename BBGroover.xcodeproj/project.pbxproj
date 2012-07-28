@@ -146,14 +146,9 @@
 				5F74A57C15C1A40000DBD241 /* Grooving */,
 				5F74A53415C19A6200DBD241 /* BBAppDelegate.h */,
 				5F74A53515C19A6200DBD241 /* BBAppDelegate.m */,
-				5F74A53715C19A6200DBD241 /* MainStoryboard_iPhone.storyboard */,
-				5F74A53A15C19A6200DBD241 /* MainStoryboard_iPad.storyboard */,
 				5F74A53D15C19A6200DBD241 /* BBViewController.h */,
 				5F74A53E15C19A6200DBD241 /* BBViewController.m */,
-				5FA7BE2515C48D8600983347 /* BBTickView.h */,
-				5FA7BE2615C48D8600983347 /* BBTickView.m */,
-				5FA7BE2715C48D8600983347 /* BBGridView.h */,
-				5FA7BE2815C48D8600983347 /* BBGridView.m */,
+				5FA7BE2C15C491DC00983347 /* UI */,
 				5F74A57B15C19DF200DBD241 /* Categories */,
 				5F74A52C15C19A6200DBD241 /* Supporting Files */,
 			);
@@ -213,6 +208,19 @@
 				5F74A58B15C1A74400DBD241 /* BBGroover.m */,
 			);
 			name = Grooving;
+			sourceTree = "<group>";
+		};
+		5FA7BE2C15C491DC00983347 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5FA7BE2515C48D8600983347 /* BBTickView.h */,
+				5FA7BE2615C48D8600983347 /* BBTickView.m */,
+				5FA7BE2715C48D8600983347 /* BBGridView.h */,
+				5FA7BE2815C48D8600983347 /* BBGridView.m */,
+				5F74A53715C19A6200DBD241 /* MainStoryboard_iPhone.storyboard */,
+				5F74A53A15C19A6200DBD241 /* MainStoryboard_iPad.storyboard */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
