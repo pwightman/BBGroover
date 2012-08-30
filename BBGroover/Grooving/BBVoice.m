@@ -30,7 +30,6 @@
     }
     
     return self;
-    
 }
 
 - (id) initWithSubdivision:(BBGrooverBeat)subdivision {
