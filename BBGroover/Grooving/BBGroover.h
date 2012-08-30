@@ -23,21 +23,28 @@ typedef enum BBGrooverBeat : NSUInteger {
 
 @interface BBGroover : NSObject
 
-
 @property (nonatomic, assign) NSObject<BBGrooverDelegate> *delegate;
 @property (nonatomic, strong) BBGroove *groove;
 @property (nonatomic, assign, readonly) BOOL running;
 @property (nonatomic, readonly) NSUInteger currentTick;
 @property (nonatomic, assign, readonly) BBGrooverBeat currentSubdivision;
 
+#pragma mark Delegate Blocks
+@property (nonatomic, strong) void (^didTickBlock)(NSUInteger tick);
+@property (nonatomic, strong) void (^voicesDidTickBlock)(NSArray *voices);
+
+#pragma mark Initializers
+- (id)initWithGroove:(BBGroove *)groove;
+
+#pragma mark Instance Methods
 - (void) startGrooving;
 - (void) stopGrooving;
 - (void) pauseGrooving;
 - (void) resumeGrooving;
 - (NSUInteger) totalTicks;
-- (id)initWithGroove:(BBGroove *)groove;
 
 @end
+
 
 @protocol BBGrooverDelegate <NSObject>
 

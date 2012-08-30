@@ -41,7 +41,23 @@
     groove.voices = @[ bass, snare, hihat ];
     
     _groover = [[BBGroover alloc] initWithGroove:groove];
+
     _groover.delegate = self;
+	
+// If you want to use blocks instead, comment out the delegate above and use this instead.
+//
+//	__block BBTickView *blockTickView = _tickView;
+//	
+//	_groover.didTickBlock = ^(NSUInteger tick) {
+//		blockTickView.currentTick = tick;
+//		[blockTickView setNeedsLayout];
+//	};
+//	
+//	_groover.voicesDidTickBlock = ^(NSArray *voices) {
+//		for (BBVoice *voice in voices) {
+//			[[OALSimpleAudio sharedInstance] playEffect:voice.audioPath];
+//		}	
+//	};
     
     for (BBVoice *voice in groove.voices) {
         [[OALSimpleAudio sharedInstance] preloadEffect:voice.audioPath];
@@ -52,27 +68,8 @@
     
 }
 
-- (IBAction)sliderChanged:(id)sender {
-    UISlider *slider = (UISlider *)sender;
-    
-    _groover.groove.tempo = (NSUInteger)slider.value;
-    
-    [self updateTempo:_groover.groove.tempo];
-    
-}
 
-- (void) updateTempo:(NSUInteger)tempo {
-    _tempoLabel.text = [NSString stringWithFormat:@"Tempo = %d", tempo];
-}
-
-- (IBAction)startTapped:(id)sender {
-    [_groover resumeGrooving];
-}
-
-- (IBAction)stopTapped:(id)sender {
-    [_groover pauseGrooving];
-}
-
+#pragma mark BBGrooverDelegate Methods
 - (void) groover:(BBGroover *)sequencer didTick:(NSUInteger)tick {
     _tickView.currentTick = tick;
     [_tickView setNeedsLayout];
@@ -85,6 +82,7 @@
     
 }
 
+#pragma mark BBGridViewDelegate Methods
 - (NSUInteger) gridView:(BBGridView *)gridView columnsForRow:(NSUInteger)row {
     return [_groover.groove.voices[row] subdivision];
 }
@@ -109,23 +107,32 @@
     return [[_groover.groove.voices[row] values][column] boolValue];
 }
 
+#pragma mark BBTickViewDelegate methods
 - (NSUInteger) ticksForTickView:(BBTickView *)tickView {
     return [_groover currentSubdivision];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark Helper Methods
+- (void) updateTempo:(NSUInteger)tempo {
+    _tempoLabel.text = [NSString stringWithFormat:@"Tempo = %d", tempo];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
+#pragma mark IBActions
+- (IBAction)sliderChanged:(id)sender {
+    UISlider *slider = (UISlider *)sender;
+    
+    _groover.groove.tempo = (NSUInteger)slider.value;
+    
+    [self updateTempo:_groover.groove.tempo];
+    
+}
+
+- (IBAction)startTapped:(id)sender {
+    [_groover resumeGrooving];
+}
+
+- (IBAction)stopTapped:(id)sender {
+    [_groover pauseGrooving];
 }
 
 @end

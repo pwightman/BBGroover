@@ -77,4 +77,20 @@ This method is similar to the one above, except it will only be called if voice(
 }
 ```
 
+### Block Alternative to Delegate
+
+If you'd prefer, there's also block versions of each delegate method if that's more your thing.
+
+```
+groover.didTickBlock = ^(NSUInteger tick) {
+    // Update UI
+};
+
+groover.voicesDidTickBlock = ^(NSArray *voices) {
+    for (BBVoice *voice in voices) {
+        [[OALSimpleAudio sharedInstance] playingyEffect:voice.audioPath];
+    }
+};
+```
+
 Run the project to see it in action. Happy Grooving!

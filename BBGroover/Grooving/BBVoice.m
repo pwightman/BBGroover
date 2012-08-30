@@ -10,13 +10,17 @@
 #import "NSNumber+Utilities.h"
 
 @interface BBVoice ()
-@property (nonatomic, strong) NSMutableArray *mutValues;
 @end
 
 @implementation BBVoice
 
+#pragma mark Initializers
 - (id) initWithValues:(NSArray *)values {
-    self = [super init];
+    return [self initWithValues:values andVelocities:[self defaultVelocities:values.count]];
+}
+
+- (id) initWithValues:(NSArray *)values andVelocities:(NSArray *)velocities {
+	self = [super init];
     
     if (self) {
         if (values.count < BBGrooverBeatMin ||
@@ -24,8 +28,14 @@
             ![NSNumber isPowerOfTwo:values.count]) {
             @throw [NSException exceptionWithName:@"Invalid Values" reason:[NSString stringWithFormat:@"The values array of BBVoice object was %d, must match a length in BBGrooverBeat enum (4/8/16/32).", values.count] userInfo:nil];
         }
-        _mutValues = [NSMutableArray arrayWithArray:values];
-        _values = _mutValues;
+        _values = [NSMutableArray arrayWithArray:values];
+		_velocities = [NSMutableArray arrayWithArray:velocities];
+		
+		// Just in case
+		if (!_velocities) {
+			_velocities = [self defaultVelocities:values.count];
+		}
+		
         _subdivision = values.count;
     }
     
@@ -42,8 +52,32 @@
     return [self initWithValues:array];
 }
 
+#pragma mark Instance Methods
 - (void) setValue:(BOOL)value forIndex:(NSUInteger)index {
-    _mutValues[index] = @(value);
+    [self mutValues][index] = @(value);
+}
+
+- (void) setVelocity:(float)velocity forIndex:(NSUInteger)index {
+	[self mutVelocities][index] = @(velocity);
+}
+
+#pragma mark Private Methods
+- (NSMutableArray *) mutValues {
+	return (NSMutableArray *)_values;
+}
+
+- (NSMutableArray *) mutVelocities {
+	return (NSMutableArray *)_velocities;
+}
+
+- (NSMutableArray *) defaultVelocities:(NSInteger)count {
+	NSMutableArray *array = [NSMutableArray arrayWithCapacity:count];
+	
+	for (NSUInteger i = 0; i < count; i++) {
+		array[i] = @1.0f;
+	}
+	
+	return array;
 }
 
 @end

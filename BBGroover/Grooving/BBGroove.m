@@ -10,6 +10,7 @@
 
 @implementation BBGroove
 
+#pragma mark Instance Methods
 - (BBGrooverBeat) maxSubdivision {
     return [[_voices valueForKeyPath:@"@max.subdivision"] unsignedIntegerValue];
 }

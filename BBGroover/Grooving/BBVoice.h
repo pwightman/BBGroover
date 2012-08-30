@@ -11,13 +11,19 @@
 
 @interface BBVoice : NSObject
 
-@property (nonatomic, strong, readonly) NSArray *values;
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *audioPath;
-@property (nonatomic, assign, readonly) BBGrooverBeat subdivision;
+@property (nonatomic, strong, readonly) NSArray         *values;
+@property (nonatomic, strong, readonly) NSArray         *velocities;
+@property (nonatomic, strong) NSString                  *name;
+@property (nonatomic, strong) NSString                  *audioPath;
+@property (nonatomic, assign, readonly) BBGrooverBeat   subdivision;
 
+#pragma mark Initializers
 - (id) initWithValues:(NSArray *)values;
+- (id) initWithValues:(NSArray *)values andVelocities:(NSArray *)velocities;
 - (id) initWithSubdivision:(BBGrooverBeat)subdivision;
+
+#pragma mark Instance Methods
 - (void) setValue:(BOOL)value forIndex:(NSUInteger)index;
+- (void) setVelocity:(float)velocity forIndex:(NSUInteger)index;
 
 @end

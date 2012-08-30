@@ -18,6 +18,7 @@
 
 @implementation BBGroover
 
+#pragma mark Initializers
 - (id) initWithGroove:(BBGroove *)groove {
     self = [super init];
     
@@ -31,6 +32,43 @@
     return self;
 }
 
+#pragma mark Instance Methods
+- (void) startGrooving {
+    [self startAtTick:0];
+}
+
+- (void) startAtTick:(NSUInteger)tick {
+    if (!_running) {
+        _running = YES;
+        [NSThread detachNewThreadSelector:@selector(run:) toTarget:self withObject:@(tick)];
+    }
+}
+
+- (void) pauseGrooving {
+    _running = NO;
+}
+
+- (void) resumeGrooving {
+    if (_currentTick) {
+        [self startAtTick:_currentTick];
+    } else {
+        [self startGrooving];
+    }
+	
+}
+
+- (void) stopGrooving {
+    _running = NO;
+    _currentTick = 0;
+}
+
+- (NSUInteger) totalTicks {
+    return (_groove.beats * _currentSubdivision)/_groove.beatUnit;
+    
+}
+
+
+#pragma mark Private Methods
 - (uint64_t) computeInterval {
     // The default interval we're working with is 1 second (1 billion nanoseconds)
     uint64_t interval = 1000 * 1000 * 1000;
@@ -72,7 +110,7 @@
     uint64_t nextTime = currentTime;
     
     // Save ourselves a function call within the loop
-    dispatch_queue_t queue = dispatch_get_main_queue();
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
     
     while (_running) {
         if (currentTime >= nextTime) {
@@ -110,12 +148,20 @@
             
             NSUInteger blockTick = _currentTick;
             
-            dispatch_async(queue, ^{
+            dispatch_async(mainQueue, ^{
                 
                 [_delegate groover:self didTick:blockTick];
+				
+				if (_didTickBlock) {
+					_didTickBlock(blockTick);
+				}
                 
                 if (tickingVoices.count > 0) {
                     [_delegate groover:self voicesDidTick:tickingVoices];
+					
+					if (_voicesDidTickBlock) {
+						_voicesDidTickBlock(tickingVoices);
+					}
                 }
                 
             });
@@ -133,39 +179,7 @@
     }
 }
 
-- (void) startGrooving {
-    [self startAtTick:0];
-}
 
-- (void) startAtTick:(NSUInteger)tick {
-    if (!_running) {
-        _running = YES;
-        [NSThread detachNewThreadSelector:@selector(run:) toTarget:self withObject:@(tick)];
-    }
-}
-
-- (void) pauseGrooving {
-    _running = NO;
-}
-
-- (void) resumeGrooving {
-    if (_currentTick) {
-        [self startAtTick:_currentTick];
-    } else {
-        [self startGrooving];
-    }
-
-}
-
-- (void) stopGrooving {
-    _running = NO;
-    _currentTick = 0;
-}
-
-- (NSUInteger) totalTicks {
-    return (_groove.beats * _currentSubdivision)/_groove.beatUnit;
-    
-}
 
 #pragma mark Utilities
 
