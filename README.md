@@ -1,6 +1,6 @@
 # BBGroover
 
-An easy-to-use scheduling/sequencing library for drum beats.
+An easy-to-use scheduling/sequencing library for drum beats. [See a video](http://www.youtube.com/watch?v=gFfUUjgRQvE) of it in action (and excuse the out-of-sync audio).
 
 ## Installation
 
