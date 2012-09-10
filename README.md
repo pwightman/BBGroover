@@ -88,7 +88,7 @@ groover.didTickBlock = ^(NSUInteger tick) {
 
 groover.voicesDidTickBlock = ^(NSArray *voices) {
     for (BBVoice *voice in voices) {
-        [[OALSimpleAudio sharedInstance] playingyEffect:voice.audioPath];
+        [[OALSimpleAudio sharedInstance] playEffect:voice.audioPath];
     }
 };
 ```
