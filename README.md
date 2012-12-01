@@ -94,3 +94,7 @@ groover.voicesDidTickBlock = ^(NSArray *voices) {
 ```
 
 Run the project to see it in action. Happy Grooving!
+
+## Contributors
+
+[Parker Wightman](https://github.com/pwightman) ([@parkerwightman](http://twitter.com/parkerwightman))  
