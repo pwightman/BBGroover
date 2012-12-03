@@ -4,7 +4,8 @@ An easy-to-use scheduling/sequencing library for drum beats. [See a video](http:
 
 ## Installation
 
-Copy all files from the `BBGroover/Grooving` folder into your project. BBGroover uses ARC so be sure to include the `-fobjc-arc` compiler flag to each file in the `Grooving` folder if your project does not use ARC. I plan on creating a CocoaPods spec at some point soon.
+1. Via [CocoaPods](http://cocoapods.org) by adding `pod "BBGroover"` to your Podfile
+2. Copy all files from the `BBGroover/Grooving` folder into your project. BBGroover uses ARC so be sure to include the `-fobjc-arc` compiler flag to each file in the `Grooving` folder if your project does not use ARC.
 
 This project uses Objective-C features available in the latest LLVM compiler, such as object literals and automagic synthesizing. Only compatible with Xcode 4.5+.
 
