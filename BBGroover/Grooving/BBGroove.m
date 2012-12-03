@@ -10,6 +10,12 @@
 
 @implementation BBGroove
 
+#pragma mark Convenience Constructors
++ (id) groove {
+	BBGroove *groove = [[BBGroove alloc] init];
+	return groove;
+}
+
 #pragma mark Instance Methods
 - (BBGrooverBeat) maxSubdivision {
     return [[_voices valueForKeyPath:@"@max.subdivision"] unsignedIntegerValue];

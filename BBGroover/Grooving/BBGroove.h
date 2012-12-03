@@ -17,6 +17,9 @@
 @property (nonatomic, assign) BBGrooverBeat beatUnit;
 @property (nonatomic, assign) NSUInteger    beats;
 
+#pragma mark Convenience Constructors
++ (id) groove;
+
 #pragma mark Instance Methods
 - (void) addVoice:(BBVoice *)object;
 - (BBGrooverBeat) maxSubdivision;

@@ -35,7 +35,8 @@ typedef enum BBGrooverBeat : NSUInteger {
 
 #pragma mark Initializers
 - (id)initWithGroove:(BBGroove *)groove;
-
++ (id) grooverWithGroove:(BBGroove *)groove;
+	
 #pragma mark Instance Methods
 - (void) startGrooving;
 - (void) stopGrooving;

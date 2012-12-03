@@ -22,6 +22,11 @@
 - (id) initWithValues:(NSArray *)values andVelocities:(NSArray *)velocities;
 - (id) initWithSubdivision:(BBGrooverBeat)subdivision;
 
+#pragma mark Convenience Contructors
++ (id) voiceWithValues:(NSArray *)values;
++ (id) voiceWithValues:(NSArray *)values andVelocities:(NSArray *)velocities;
++ (id) voiceWithSubdivision:(BBGrooverBeat)subdivision;
+
 #pragma mark Instance Methods
 - (void) setValue:(BOOL)value forIndex:(NSUInteger)index;
 - (void) setVelocity:(float)velocity forIndex:(NSUInteger)index;

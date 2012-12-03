@@ -52,6 +52,22 @@
     return [self initWithValues:array];
 }
 
+#pragma mark Convenience Contructors
++ (id) voiceWithValues:(NSArray *)values {
+	BBVoice *voice = [[self alloc] initWithValues:values];
+	return voice;
+}
+
++ (id) voiceWithValues:(NSArray *)values andVelocities:(NSArray *)velocities {
+	BBVoice *voice = [[self alloc] initWithValues:values andVelocities:velocities];
+	return voice;
+}
+
++ (id) voiceWithSubdivision:(BBGrooverBeat)subdivision {
+	BBVoice *voice = [[self alloc] initWithSubdivision:subdivision];
+	return voice;
+}
+
 #pragma mark Instance Methods
 - (void) setValue:(BOOL)value forIndex:(NSUInteger)index {
     [self mutValues][index] = @(value);

@@ -32,6 +32,11 @@
     return self;
 }
 
++ (id) grooverWithGroove:(BBGroove *)groove {
+	BBGroover *groover = [[self alloc] initWithGroove:groove];
+	return groover;
+}
+
 #pragma mark Instance Methods
 - (void) startGrooving {
     [self startAtTick:0];

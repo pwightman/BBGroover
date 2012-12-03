@@ -21,26 +21,26 @@
 {
     [super viewDidLoad];
 
-    BBGroove *groove = [[BBGroove alloc] init];
+    BBGroove *groove = [BBGroove groove];
     groove.tempo = 120;
     groove.beats = 4;
     groove.beatUnit = BBGrooverBeatQuarter;
 
-    BBVoice *bass = [[BBVoice alloc] initWithSubdivision:BBGrooverBeatSixteenth];
+    BBVoice *bass = [BBVoice voiceWithSubdivision:BBGrooverBeatSixteenth];
     bass.name = @"Bass Drum";
     bass.audioPath = @"bassdrum.wav";
     
-    BBVoice *snare = [[BBVoice alloc] initWithSubdivision:BBGrooverBeatSixteenth];
+    BBVoice *snare = [BBVoice voiceWithSubdivision:BBGrooverBeatSixteenth];
     snare.name = @"Snare drum";
     snare.audioPath = @"snare.wav";
     
-    BBVoice *hihat = [[BBVoice alloc] initWithSubdivision:BBGrooverBeatSixteenth];
+    BBVoice *hihat = [BBVoice voiceWithSubdivision:BBGrooverBeatSixteenth];
     hihat.name = @"Hi Hat";
     hihat.audioPath = @"hihat.wav";
     
     groove.voices = @[ bass, snare, hihat ];
     
-    _groover = [[BBGroover alloc] initWithGroove:groove];
+    _groover = [BBGroover grooverWithGroove:groove];
 
     _groover.delegate = self;
 	
