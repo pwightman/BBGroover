@@ -58,7 +58,7 @@ BBGroover *groover = [[BBGroover alloc] initWithGroove:groove];
 
 ### BBGrooverDelegate
 
-This method is called every time the groover ticks. Ticks are determined by whichever voice has the highest sibdivision. For example, if the groove's tempo was 60, and the voice with the highest subdivision was 16th notes, then this delegate would be called 16 times every second, whether a voice is actually playing or not.
+`groover:didTick:` is called every time the groover ticks. Ticks are determined by whichever voice has the highest sibdivision. For example, if the groove's tempo was 60, and the voice with the highest subdivision was 16th notes, then this delegate would be called 16 times every second, whether a voice is actually playing or not.
 
 ```
 - (void) groover:(BBGroover *)groover didTick:(NSNumber *)tick {
@@ -66,7 +66,7 @@ This method is called every time the groover ticks. Ticks are determined by whic
 }
 ```
 
-This method is similar to the one above, except it will only be called if voice(s) are ticking at a particular subdivision. Here, we're just playing the audio file related to each ticking voice.
+`groover:voicesDidTick:` is similar to the one above, except it will only be called if voice(s) are ticking at a particular subdivision. Here, we're just playing the audio file related to each ticking voice.
 
 ```
 - (void) groover:(BBGroover *)groover voicesDidTick:(NSArray *)voices {
