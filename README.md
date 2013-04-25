@@ -17,7 +17,7 @@ The example code below is pulled from the example project included in this repo.
 
 A voice is a logical playing unit, such as a bass drum, snare, or hihat. Create as many voices as you want with an array of values indicating where the voice "hits":
 
-```
+```objc
 NSArray *values = @[ @NO,  @NO,  @YES, @YES ];
 BBVoice *snare = [[BBVoice alloc] initWithValues:values];
 snare.name = @"Snare drum";
@@ -26,7 +26,7 @@ snare.audioPath = @"snare.wav";
 
 You can also create an empty voice and just indicate the subdivision.
 
-```
+```objc
 BBVoice *hihat = [[BBVoice alloc] initWithSubdivision:BBGrooverBeatEighth];
 hihat.name = @"Hi Hat";
 hihat.audioPath = @"hihat.wav";
@@ -36,7 +36,7 @@ hihat.audioPath = @"hihat.wav";
 
 A groove stores a collection of voices, as well as other relevant meta data like tempo and time signature:
 
-```
+```objc
 BBGroove *groove = [[BBGroove alloc] init];
 
 groove.voices = @[ snare, hihat ];
@@ -51,16 +51,19 @@ groove.beatUnit = BBGrooverBeatQuarter;
 
 The groover's job is to schedule each voice of the passed-in groove to play at the appropriate time. The groove does not actually play the note, but just notifies a delegate, who can play the audio if it wants.
 
-```
+```objc
 BBGroover *groover = [[BBGroover alloc] initWithGroove:groove];
 [groover startGrooving];
 ```
 
 ### BBGrooverDelegate
 
-`groover:didTick:` is called every time the groover ticks. Ticks are determined by whichever voice has the highest sibdivision. For example, if the groove's tempo was 60, and the voice with the highest subdivision was 16th notes, then this delegate would be called 16 times every second, whether a voice is actually playing or not.
+`groover:didTick:` is called every time the groover ticks. Ticks are determined by whichever voice has 
+the highest sibdivision. For example, if the groove's tempo was 60, and the voice with the highest subdivision 
+was 16th notes, then this delegate would be called 16 times every second, whether a voice is actually playing 
+or not. `tick` would be the place in a measure (some number between 0 and 15 in the case of 16th notes case).
 
-```
+```objc
 - (void) groover:(BBGroover *)groover didTick:(NSNumber *)tick {
     // You could update the UI to reflect where the groover was ticking, for example.
 }
@@ -68,7 +71,7 @@ BBGroover *groover = [[BBGroover alloc] initWithGroove:groove];
 
 `groover:voicesDidTick:` is similar to the one above, except it will only be called if voice(s) are ticking at a particular subdivision. Here, we're just playing the audio file related to each ticking voice.
 
-```
+```objc
 - (void) groover:(BBGroover *)groover voicesDidTick:(NSArray *)voices {
     for (BBVoice *voice in voices) {
         // Using ObjectAL to play the audio here.
@@ -82,7 +85,7 @@ BBGroover *groover = [[BBGroover alloc] initWithGroove:groove];
 
 If you'd prefer, there's also block versions of each delegate method if that's more your thing.
 
-```
+```objc
 groover.didTickBlock = ^(NSUInteger tick) {
     // Update UI
 };
